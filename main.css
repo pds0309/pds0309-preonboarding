@@ -1,0 +1,224 @@
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(274px, auto);
+  grid-template-areas:
+    "main-carousel main-carousel main-carousel card-finance1"
+    "main-carousel main-carousel main-carousel card-pop-article"
+    "feature-stories card-entertainment card-entertainment card-pop-article"
+    "feature-stories card-finance2 card-gaming card-technology";
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "main-carousel main-carousel main-carousel"
+      "feature-stories card-entertainment card-finance1"
+      "feature-stories card-technology card-pop-article"
+      "card-gaming card-finance2 card-pop-article";
+    gap: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main-content > .main-carousel {
+  position: relative;
+  grid-area: main-carousel;
+  background: url("/assets/images/finance-1.jpg") center top no-repeat;
+}
+
+.main-carousel .arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-black);
+}
+
+.arrow:hover {
+  opacity: 0.8;
+}
+
+.arrow.left {
+  margin: auto auto auto 0;
+}
+
+.arrow.right {
+  margin: auto 0 auto auto;
+}
+
+.main-content > .card-finance1 {
+  grid-area: card-finance1;
+  background: url("/assets/images/finance-2.jpg") center top no-repeat;
+}
+
+.main-content > .card-finance2 {
+  grid-area: card-finance2;
+  background: url("/assets/images/finance-3.jpg") center top no-repeat;
+}
+
+.main-content > .card-entertainment {
+  grid-area: card-entertainment;
+  background: url("/assets/images/enter-1.jpg") center -44px no-repeat;
+}
+
+.main-content > .card-gaming {
+  grid-area: card-gaming;
+  background: url("/assets/images/gaming-1.jpg") center top no-repeat;
+}
+
+.main-content > .card-technology {
+  grid-area: card-technology;
+  background: url("/assets/images/tech-1.jpg") center top no-repeat;
+}
+
+.main-content > .card-pop-article {
+  grid-area: card-pop-article;
+  background-color: var(--color-brand);
+}
+
+.main-content > .feature-stories {
+  grid-area: feature-stories;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 0 21px 0;
+  color: var(--color-white);
+}
+
+.card > .brand-tag {
+  width: fit-content;
+}
+
+.card.main-carousel {
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.card.carousel-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.carousel-body .title {
+  max-width: 593px;
+  padding: 30px 0 0 5px;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.carousel-body .description {
+  max-width: 483px;
+  line-height: 26px;
+  color: var(--color-white-70);
+}
+
+.card-pop-article {
+  padding: 30px 28px 46px 25px !important;
+}
+
+.card-pop-article .description {
+  flex: 1;
+  color: var(--color-white);
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.card-pop-article button {
+  padding: 16px 64px !important;
+  border: 1px solid var(--color-white-70);
+  border-bottom: 2px solid var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.card.feature-stories {
+  justify-content: flex-start;
+  box-shadow: 0 0 0 1px var(--color-gray) inset;
+  padding-bottom: 0;
+}
+
+.feature-stories li {
+  position: relative;
+  padding: 24px;
+}
+
+.feature-stories li > a {
+  display: -webkit-box;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.card-heading {
+  width: 70%;
+  padding: 19px 25px;
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .card-heading {
+    width: 100%;
+  }
+}
+
+.card.background-image {
+  position: relative;
+  background-size: cover;
+  z-index: 1;
+}
+
+.card.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.card > .subinfo-box {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 25px;
+}
+
+.card > .subinfo-box > div {
+  display: flex;
+  column-gap: 11px;
+  align-items: center;
+}
+
+.card > .subinfo-box > div > img {
+  margin-bottom: -2px;
+}

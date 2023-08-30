@@ -32,5 +32,9 @@ nav {
 }
 
 nav a {
-  opacity: 0.2;
+  color: var(--color-black-20);
+}
+
+nav a:hover {
+  color: var(--color-black);
 }

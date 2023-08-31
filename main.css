@@ -146,13 +146,20 @@
 }
 
 .card-pop-article button {
-  padding: 16px 64px !important;
+  padding: 16px 64px;
   border: 1px solid var(--color-white-70);
   border-bottom: 2px solid var(--color-white);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.8px;
   white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .card-pop-article button {
+    margin-top: 12px;
+    padding: 16px 32px;
+  }
 }
 
 .card.feature-stories {

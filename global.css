@@ -30,6 +30,12 @@ main {
   padding: 40px;
 }
 
+@media (max-width: 991px) {
+  main {
+    padding: 20px;
+  }
+}
+
 h2,
 h3 {
   padding: 0;

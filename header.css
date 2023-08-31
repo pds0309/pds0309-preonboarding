@@ -7,17 +7,12 @@ header {
   align-items: center;
   justify-content: space-between;
   column-gap: 58px;
-  /* TODO: responsive */
   flex-wrap: wrap;
-  padding: 0 38px;
+  padding: 30px 38px;
 }
 
 header .logo {
   margin-bottom: -2px;
-}
-
-header:nth-child(2) {
-  flex: 1;
 }
 
 nav {
@@ -26,9 +21,30 @@ nav {
   align-items: center;
   justify-content: flex-start;
   column-gap: 59px;
-  /* TODO: responsive */
   flex-wrap: wrap;
-  min-height: 90px;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 30px 20px;
+  }
+  nav {
+    flex: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    margin-top: 16px;
+    padding: 16px 16px 0 0;
+    transition: all 0.5s;
+  }
+  nav.invisible {
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 nav a {

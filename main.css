@@ -33,7 +33,7 @@
 .main-content > .main-carousel {
   position: relative;
   grid-area: main-carousel;
-  background: url("/assets/images/finance-1.jpg") center top no-repeat;
+  background: url("./assets/images/finance-1.jpg") center top no-repeat;
 }
 
 .main-carousel .arrow {
@@ -61,27 +61,27 @@
 
 .main-content > .card-finance1 {
   grid-area: card-finance1;
-  background: url("/assets/images/finance-2.jpg") center top no-repeat;
+  background: url("./assets/images/finance-2.jpg") center top no-repeat;
 }
 
 .main-content > .card-finance2 {
   grid-area: card-finance2;
-  background: url("/assets/images/finance-3.jpg") center top no-repeat;
+  background: url("./assets/images/finance-3.jpg") center top no-repeat;
 }
 
 .main-content > .card-entertainment {
   grid-area: card-entertainment;
-  background: url("/assets/images/enter-1.jpg") center -44px no-repeat;
+  background: url("./assets/images/enter-1.jpg") center -44px no-repeat;
 }
 
 .main-content > .card-gaming {
   grid-area: card-gaming;
-  background: url("/assets/images/gaming-1.jpg") center top no-repeat;
+  background: url("./assets/images/gaming-1.jpg") center top no-repeat;
 }
 
 .main-content > .card-technology {
   grid-area: card-technology;
-  background: url("/assets/images/tech-1.jpg") center top no-repeat;
+  background: url("./assets/images/tech-1.jpg") center top no-repeat;
 }
 
 .main-content > .card-pop-article {
